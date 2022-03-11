@@ -1,0 +1,98 @@
+{
+  "HALProvider": {
+    "Other Devices": {
+      "Talon SRX[4]": {
+        "header": {
+          "open": true
+        }
+      },
+      "Talon SRX[4]/Analog In": {
+        "header": {
+          "open": true
+        }
+      },
+      "Talon SRX[4]/Fwd Limit": {
+        "header": {
+          "open": true
+        }
+      },
+      "Talon SRX[4]/Pulse Width Input": {
+        "header": {
+          "open": true
+        }
+      },
+      "Talon SRX[4]/Quad Encoder": {
+        "header": {
+          "open": true
+        }
+      },
+      "Talon SRX[4]/Rev Limit": {
+        "header": {
+          "open": true
+        }
+      },
+      "Talon SRX[5]": {
+        "header": {
+          "open": true
+        }
+      },
+      "Talon SRX[5]/Analog In": {
+        "header": {
+          "open": true
+        }
+      },
+      "Talon SRX[5]/Fwd Limit": {
+        "header": {
+          "open": true
+        }
+      },
+      "Talon SRX[5]/Pulse Width Input": {
+        "header": {
+          "open": true
+        }
+      },
+      "Talon SRX[5]/Quad Encoder": {
+        "header": {
+          "open": true
+        }
+      },
+      "Victor SPX[1]": {
+        "header": {
+          "open": true
+        }
+      },
+      "Victor SPX[3]": {
+        "header": {
+          "open": true
+        }
+      }
+    }
+  },
+  "NTProvider": {
+    "types": {
+      "/FMSInfo": "FMSInfo",
+      "/LiveWindow/Drivetrain": "Subsystem",
+      "/LiveWindow/Ungrouped/Talon SRX [4]": "Motor Controller",
+      "/LiveWindow/Ungrouped/Talon SRX [5]": "Motor Controller",
+      "/LiveWindow/Ungrouped/Victor SPX [1]": "Motor Controller",
+      "/LiveWindow/Ungrouped/Victor SPX [3]": "Motor Controller"
+    }
+  },
+  "NetworkTables": {
+    "FMSInfo": {
+      "open": true
+    },
+    "LiveWindow": {
+      ".status": {
+        "open": true
+      },
+      "Drivetrain": {
+        "open": true
+      },
+      "Ungrouped": {
+        "open": true
+      },
+      "open": true
+    }
+  }
+}
