@@ -13,12 +13,13 @@ import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.Button;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
-//import frc.robot.commands.BarrelHome;
-import frc.robot.commands.LiftMotor;
+//import frc.robot.commands.LiftMotor;
 //import frc.robot.commands.LiftMotorBrake;
 import frc.robot.commands.Move10ft;
 //import frc.robot.commands.EncoderPos1;
 import frc.robot.commands.TankDrive;
+//camera server import
+import edu.wpi.first.cameraserver.CameraServer;
 
 /**
  * This class is where the bulk of the robot should be declared. Since
@@ -59,11 +60,13 @@ public class RobotContainer {
     configureButtonBindings();
     //A is down, X is up
     //AButton.whileHeld(new LiftMotor(0.8));
-    XButton.whileHeld(new LiftMotor(-0.25));
-    BButton.whileHeld(new LiftMotor(0.3));
+    //XButton.whileHeld(new LiftMotor(-0.25));
+    //BButton.whileHeld(new LiftMotor(0.3));
     //LBButton.whenPressed(new BarrelMotors(0.25, 0.0).withTimeout(0.7));
     LBButton.whenPressed(new Move10ft());
     RBButton.whenPressed(new TankDrive());
+    CameraServer.startAutomaticCapture("Cam0",0);
+    CameraServer.startAutomaticCapture("Cam1",1);
   }
 
   /** 

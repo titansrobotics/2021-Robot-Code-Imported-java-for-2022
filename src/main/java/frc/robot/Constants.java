@@ -30,6 +30,7 @@ public final class Constants {
 	public static final int BUTTON_LB = 5;
 	public static final int BUTTON_RB = 6;
 	public static final double Timeout = 4.25;
+	public static final int ARM_ANGLE_MOTOR_ID = 6;
 	public static final int LIFT_MOTOR_ID1 = 4;
 	public static final int LIFT_MOTOR_ID2 = 5;
 }

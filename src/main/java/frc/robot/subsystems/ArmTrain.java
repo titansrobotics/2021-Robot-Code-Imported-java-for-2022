@@ -12,11 +12,11 @@ import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
-import frc.robot.commands.LiftMotor;
+import frc.robot.commands.ArmDrive;
 
 public class ArmTrain extends SubsystemBase {
 
-  private WPI_TalonSRX armMotor = new WPI_TalonSRX(Constants.LIFT_MOTOR_ID1);
+  private WPI_TalonSRX armMotor = new WPI_TalonSRX(Constants.ARM_ANGLE_MOTOR_ID);
   /**
    * Creates a new Drivetrain.
    */
@@ -26,7 +26,7 @@ public class ArmTrain extends SubsystemBase {
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
-    setDefaultCommand(new LiftMotor(0));
+    setDefaultCommand(new ArmDrive());
   }
 
   public void setArmAngleMotor(double speed){

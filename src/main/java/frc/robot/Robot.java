@@ -12,7 +12,7 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 // import frc.robot.RobotContainer;
 import frc.robot.subsystems.Drivetrain;
-import frc.robot.subsystems.LiftTrain;
+//import frc.robot.subsystems.LiftTrain;
 import frc.robot.subsystems.ArmTrain;
 //import edu.wpi.first.wpilibj.Encoder;
 //import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -25,7 +25,7 @@ import frc.robot.subsystems.ArmTrain;
  */
 public class Robot extends TimedRobot {
   private Command m_autonomousCommand;
-  public static LiftTrain liftTrain = new LiftTrain();
+  //public static LiftTrain liftTrain = new LiftTrain();
   public static Drivetrain driveTrain = new Drivetrain();
   public static ArmTrain armTrain = new ArmTrain();
   public static RobotContainer m_RC;
@@ -42,8 +42,6 @@ public class Robot extends TimedRobot {
     // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
     // autonomous chooser on the dashboard.
     m_RC = new RobotContainer();
-    //enc = new Encoder(0,1);
-    //enc.setDistancePerPulse(Math.PI*whd/cpr); //distance per pulse is pi* (wheel diameter / counts per revolution)
     frc.robot.subsystems.Drivetrain.driveReset();
   }
 
