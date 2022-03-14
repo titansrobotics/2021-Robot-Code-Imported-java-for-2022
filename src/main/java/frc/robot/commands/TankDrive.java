@@ -30,9 +30,10 @@ public class TankDrive extends CommandBase {
   public void execute() {
     double leftStickY = Robot.m_RC.GetDriverRawAxis(Constants.LEFT_STICKY);
     double rightStickY = Robot.m_RC.GetDriverRawAxis(Constants.RIGHT_STICKY);
+    double exponentialVar = 3;
 
-    Robot.driveTrain.setLeftMotor(leftStickY*0.8);
-    Robot.driveTrain.setRightMotor(rightStickY*0.8);
+    Robot.driveTrain.setLeftMotor(Math.pow(leftStickY, exponentialVar));
+    Robot.driveTrain.setRightMotor(Math.pow(rightStickY, exponentialVar));
   }
 
   // Called once the command ends or is interrupted.
