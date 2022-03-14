@@ -21,7 +21,7 @@ public class Drivetrain extends SubsystemBase {
   private WPI_VictorSPX motorRight = new WPI_VictorSPX(Constants.MOTOR_RIGHT_ID);
 
   public static Encoder enc;
-  private static final double cpr = 5; //if am-3314a
+  private static final double cpr = 20; //if am-3314a
   private static final double whd = 6; // for 6 inch wheel
 
   

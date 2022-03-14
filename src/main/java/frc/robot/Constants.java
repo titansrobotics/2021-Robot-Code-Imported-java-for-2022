@@ -28,10 +28,6 @@ public final class Constants {
 	public static final int BUTTON_LB = 5;
 	public static final int BUTTON_RB = 6;
 	public static final double Timeout = 4.25;
-	public static final int CAGE_LEFT_ID = 0;
-	public static final int CAGE_RIGHT_ID = 1;
-	public static final double RIGHTCAGESPEED = 0.7;
-	public static final double LEFTCAGESPEED = 0.7;
 	public static final int LIFT_MOTOR_ID1 = 4;
 	public static final int LIFT_MOTOR_ID2 = 5;
 	public static final int DRIVER_CONTROLLER1 = 1;

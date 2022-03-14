@@ -82,7 +82,7 @@ public class RobotContainer {
    * @return the command to run in autonomous
    */
   public Command getAutonomousCommand() {
-    return(null);
+    return(new Move10ft());
     // An ExampleCommand will run in autonomous
   }
 }
