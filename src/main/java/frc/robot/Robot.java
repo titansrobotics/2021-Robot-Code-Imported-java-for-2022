@@ -13,6 +13,7 @@ import edu.wpi.first.wpilibj2.command.CommandScheduler;
 // import frc.robot.RobotContainer;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.LiftTrain;
+import frc.robot.subsystems.ArmTrain;
 //import edu.wpi.first.wpilibj.Encoder;
 //import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
@@ -26,6 +27,7 @@ public class Robot extends TimedRobot {
   private Command m_autonomousCommand;
   public static LiftTrain liftTrain = new LiftTrain();
   public static Drivetrain driveTrain = new Drivetrain();
+  public static ArmTrain armTrain = new ArmTrain();
   public static RobotContainer m_RC;
   //Encoder enc;
   //private static final double cpr = 5; //if am-3314a

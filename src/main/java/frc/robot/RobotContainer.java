@@ -30,12 +30,12 @@ import frc.robot.commands.TankDrive;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private Joystick driverController = new Joystick(Constants.DRIVER_CONTROLLER);
-  private Joystick driverController1 = new Joystick(Constants.DRIVER_CONTROLLER1);
+  private Joystick shotgunController = new Joystick(Constants.SHOTGUN_CONTROLLER);
   Button AButton = new JoystickButton(driverController, Constants.BUTTON_A);
   Button XButton = new JoystickButton(driverController, Constants.BUTTON_X);
   Button BButton = new JoystickButton(driverController, Constants.BUTTON_B);
-  Button BButton1 = new JoystickButton(driverController1, Constants.BUTTON_B);
-  Button YButton1 = new JoystickButton(driverController1, Constants.BUTTON_Y);
+  Button BButton1 = new JoystickButton(shotgunController, Constants.BUTTON_B);
+  Button YButton1 = new JoystickButton(shotgunController, Constants.BUTTON_Y);
   Button YButton = new JoystickButton(driverController, Constants.BUTTON_Y);
   Button LBButton = new JoystickButton(driverController, Constants.BUTTON_LB);
   Button RBButton = new JoystickButton(driverController, Constants.BUTTON_RB);
@@ -44,8 +44,8 @@ public class RobotContainer {
     return driverController.getRawAxis(axis);
   }
 
-  public double GetBarrelRawAxis(int axis){
-    return driverController1.getRawAxis(axis);
+  public double GetShotgunRawAxis(int axis){
+    return shotgunController.getRawAxis(axis);
   }
 
   // private final ExampleCommand m_autoCommand = new

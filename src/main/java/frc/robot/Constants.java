@@ -19,8 +19,10 @@ public final class Constants {
 	public static final int MOTOR_LEFT_ID = 1;
 	public static final int MOTOR_RIGHT_ID = 3;
 	public static final int DRIVER_CONTROLLER = 0;
+	public static final int SHOTGUN_CONTROLLER = 1;
 	public static final int LEFT_STICKY = 1;
 	public static final int RIGHT_STICKY = 3;
+	public static final int FLIGHT_STICKY = 1;
 	public static final int BUTTON_A = 2;
 	public static final int BUTTON_X = 1;
 	public static final int BUTTON_B = 3;
@@ -30,6 +32,4 @@ public final class Constants {
 	public static final double Timeout = 4.25;
 	public static final int LIFT_MOTOR_ID1 = 4;
 	public static final int LIFT_MOTOR_ID2 = 5;
-	public static final int DRIVER_CONTROLLER1 = 1;
-	
 }
