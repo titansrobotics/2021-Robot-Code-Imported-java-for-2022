@@ -14,6 +14,8 @@ import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.robot.subsystems.Drivetrain;
 //import frc.robot.subsystems.LiftTrain;
 import frc.robot.subsystems.ArmTrain;
+import frc.robot.subsystems.WinchTrain;
+
 //import edu.wpi.first.wpilibj.Encoder;
 //import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
@@ -31,6 +33,8 @@ public class Robot extends TimedRobot {
   //public static LiftTrain liftTrain = new LiftTrain();
   public static Drivetrain driveTrain = new Drivetrain();
   public static ArmTrain armTrain = new ArmTrain();
+  public static WinchTrain winchTrain = new WinchTrain();
+
   public static RobotContainer m_RC;
   //Encoder enc;
   //private static final double cpr = 5; //if am-3314a

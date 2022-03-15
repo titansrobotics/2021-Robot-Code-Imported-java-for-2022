@@ -27,6 +27,7 @@ public final class Constants {
 	public static final int LEFT_STICKY = 1;
 	public static final int RIGHT_STICKY = 3;
 	public static final int FLIGHT_STICKY = 1;
+	public static final int FLIGHT_THRUST = 4;
 	public static final int BUTTON_A = 2;
 	public static final int BUTTON_X = 1;
 	public static final int BUTTON_B = 3;
@@ -35,6 +36,5 @@ public final class Constants {
 	public static final int BUTTON_RB = 6;
 	public static final double Timeout = 4.25;
 	public static final int ARM_ANGLE_MOTOR_ID = 6;
-	public static final int LIFT_MOTOR_ID1 = 4;
-	public static final int LIFT_MOTOR_ID2 = 5;
+	public static final int WINCH_MOTOR_ID = 6;
 }
