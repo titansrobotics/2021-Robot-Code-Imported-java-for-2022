@@ -33,7 +33,7 @@ public class ArmDrive extends CommandBase {
   public void execute() {
     double flightStickY = Robot.m_RC.GetShotgunRawAxis(Constants.FLIGHT_STICKY);
 
-    Robot.armTrain.setArmAngleMotor(0.5*flightStickY);
+    Robot.armTrain.setArmAngleMotor(flightStickY);
   }
 
   // Called once the command ends or is interrupted.
