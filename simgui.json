@@ -76,27 +76,7 @@
           "open": true
         }
       },
-      "Talon SRX[6]/Analog In": {
-        "header": {
-          "open": true
-        }
-      },
-      "Talon SRX[6]/Fwd Limit": {
-        "header": {
-          "open": true
-        }
-      },
-      "Talon SRX[6]/Pulse Width Input": {
-        "header": {
-          "open": true
-        }
-      },
-      "Talon SRX[6]/Quad Encoder": {
-        "header": {
-          "open": true
-        }
-      },
-      "Talon SRX[6]/Rev Limit": {
+      "Talon SRX[7]": {
         "header": {
           "open": true
         }
@@ -138,8 +118,10 @@
       "/LiveWindow/Ungrouped/Talon SRX [4]": "Motor Controller",
       "/LiveWindow/Ungrouped/Talon SRX [5]": "Motor Controller",
       "/LiveWindow/Ungrouped/Talon SRX [6]": "Motor Controller",
+      "/LiveWindow/Ungrouped/Talon SRX [7]": "Motor Controller",
       "/LiveWindow/Ungrouped/Victor SPX [1]": "Motor Controller",
-      "/LiveWindow/Ungrouped/Victor SPX [3]": "Motor Controller"
+      "/LiveWindow/Ungrouped/Victor SPX [3]": "Motor Controller",
+      "/LiveWindow/WinchTrain": "Subsystem"
     },
     "windows": {
       "/LiveWindow/ArmTrain": {
@@ -175,7 +157,7 @@
               "autoFit": true
             }
           ],
-          "height": 538,
+          "height": 366,
           "series": [
             {
               "color": [
@@ -258,6 +240,38 @@
                 1.0
               ],
               "id": "CANMotor:Talon SRX[6]-percentOutput"
+            }
+          ]
+        }
+      ]
+    },
+    "Plot <3>": {
+      "plots": [
+        {
+          "axis": [
+            {
+              "autoFit": true
+            }
+          ],
+          "height": 320,
+          "series": [
+            {
+              "color": [
+                0.2980392277240753,
+                0.44705885648727417,
+                0.6901960968971252,
+                1.0
+              ],
+              "id": "Joystick[1] Axis[3]"
+            },
+            {
+              "color": [
+                0.8666667342185974,
+                0.5176470875740051,
+                0.32156863808631897,
+                1.0
+              ],
+              "id": "CANMotor:Talon SRX[7]-percentOutput"
             }
           ]
         }
