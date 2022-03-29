@@ -13,11 +13,12 @@ import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.Button;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
-//import frc.robot.commands.LiftMotor;
-//import frc.robot.commands.LiftMotorBrake;
+//Commands imports
 import frc.robot.commands.Move10ft;
-//import frc.robot.commands.EncoderPos1;
 import frc.robot.commands.TankDrive;
+import frc.robot.commands.SpeedModifierDown;
+import frc.robot.commands.SpeedModifierUp;
+
 //camera server import
 import edu.wpi.first.cameraserver.CameraServer;
 
@@ -43,6 +44,8 @@ public class RobotContainer {
   Button YButton = new JoystickButton(driverController, Constants.BUTTON_Y);
   Button LBButton = new JoystickButton(driverController, Constants.BUTTON_LB);
   Button RBButton = new JoystickButton(driverController, Constants.BUTTON_RB);
+  Button LTButton = new JoystickButton(driverController, Constants.BUTTON_LT);
+  Button RTButton = new JoystickButton(driverController, Constants.BUTTON_RT);
 
   public double GetDriverRawAxis(int axis) {
     return driverController.getRawAxis(axis);
@@ -51,6 +54,8 @@ public class RobotContainer {
   public double GetShotgunRawAxis(int axis){
     return shotgunController.getRawAxis(axis);
   }
+
+
 
   // private final ExampleCommand m_autoCommand = new
   // ExampleCommand(m_exampleSubsystem);
@@ -61,13 +66,10 @@ public class RobotContainer {
   public RobotContainer() {
     // Configure the button bindings
     configureButtonBindings();
-    //A is down, X is up
-    //AButton.whileHeld(new LiftMotor(0.8));
-    //XButton.whileHeld(new LiftMotor(-0.25));
-    //BButton.whileHeld(new LiftMotor(0.3));
-    //LBButton.whenPressed(new BarrelMotors(0.25, 0.0).withTimeout(0.7));
     LBButton.whenPressed(new Move10ft());
     RBButton.whenPressed(new TankDrive());
+    LTButton.whenPressed(new SpeedModifierDown());
+    RTButton.whenPressed(new SpeedModifierUp());
     CameraServer.startAutomaticCapture("Cam0",0);
     CameraServer.startAutomaticCapture("Cam1",1);
   }

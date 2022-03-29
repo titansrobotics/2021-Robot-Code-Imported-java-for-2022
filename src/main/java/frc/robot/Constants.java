@@ -34,7 +34,10 @@ public final class Constants {
 	public static final int BUTTON_Y = 4;
 	public static final int BUTTON_LB = 5;
 	public static final int BUTTON_RB = 6;
+	public static final int BUTTON_LT = 7;
+	public static final int BUTTON_RT = 8;
 	public static final double Timeout = 4.25;
 	public static final int ARM_ANGLE_MOTOR_ID = 4;
-	public static final int WINCH_MOTOR_ID = 7;
+	public static final int WINCH_MOTOR_ID = 7;	
+	public static double tankSpeed = 0.6; 
 }

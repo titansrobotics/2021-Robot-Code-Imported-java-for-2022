@@ -31,11 +31,14 @@ public class TankDrive extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
+    // var multiplier = 0.5;
+    // double flightStickY = Robot.m_RC.GetShotgunRawAxis(Constants.FLIGHT_STICKY);
+    
     double leftStickY = Robot.m_RC.GetDriverRawAxis(Constants.LEFT_STICKY);
     double rightStickY = Robot.m_RC.GetDriverRawAxis(Constants.RIGHT_STICKY);
 
-    Robot.driveTrain.setLeftMotor(leftStickY);
-    Robot.driveTrain.setRightMotor(rightStickY);
+    Robot.driveTrain.setLeftMotor(frc.robot.Constants.tankSpeed*leftStickY);
+    Robot.driveTrain.setRightMotor(frc.robot.Constants.tankSpeed*rightStickY);
   }
 
   // Called once the command ends or is interrupted.
