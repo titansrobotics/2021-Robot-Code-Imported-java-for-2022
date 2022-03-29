@@ -7,12 +7,14 @@
 
 package frc.robot;
 
+//Controller API imports
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.Button;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
+
 //Commands imports
 import frc.robot.commands.Move10ft;
 import frc.robot.commands.TankDrive;
@@ -55,11 +57,6 @@ public class RobotContainer {
     return shotgunController.getRawAxis(axis);
   }
 
-
-
-  // private final ExampleCommand m_autoCommand = new
-  // ExampleCommand(m_exampleSubsystem);
-
   /**
    * The container for the robot. Contains subsystems, OI devices, and commands.
    */
@@ -70,6 +67,9 @@ public class RobotContainer {
     RBButton.whenPressed(new TankDrive());
     LTButton.whenPressed(new SpeedModifierDown());
     RTButton.whenPressed(new SpeedModifierUp());
+
+    //Forces the cameras to start. Dunno if we actually need this but I'm adding it
+    // just to make sure we get both camera streams up and running.
     CameraServer.startAutomaticCapture("Cam0",0);
     CameraServer.startAutomaticCapture("Cam1",1);
   }
@@ -90,7 +90,7 @@ public class RobotContainer {
    * @return the command to run in autonomous
    */
   public Command getAutonomousCommand() {
-    return(new Move10ft());
     // An ExampleCommand will run in autonomous
+    return(new Move10ft()); 
   }
 }

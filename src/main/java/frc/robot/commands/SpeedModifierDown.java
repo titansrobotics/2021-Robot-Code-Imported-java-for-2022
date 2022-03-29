@@ -19,8 +19,6 @@ public class SpeedModifierDown extends CommandBase {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-    
-    
   }
 
   // Called every time the scheduler runs while the command is scheduled.
@@ -29,7 +27,8 @@ public class SpeedModifierDown extends CommandBase {
     if (frc.robot.Constants.tankSpeed > 0.3) {
         frc.robot.Constants.tankSpeed -= 0.2; 
     } else {
-        //lol don't do anything, you're bottomed out
+        //lol don't do anything, you're bottomed out. This could be just an if statement
+        // but I wanted to leave this comment.
     }
   }
 

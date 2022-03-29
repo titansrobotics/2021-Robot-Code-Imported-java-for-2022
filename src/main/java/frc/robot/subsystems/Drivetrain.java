@@ -40,7 +40,6 @@ public class Drivetrain extends SubsystemBase {
   public void periodic() {
     // This method will be called once per scheduler run
     setDefaultCommand(new TankDrive());
-    //setDefaultCommand(new EncoderPos1());
   }
 
   public static double driveDistance(){

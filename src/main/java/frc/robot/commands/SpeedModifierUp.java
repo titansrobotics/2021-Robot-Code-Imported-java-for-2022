@@ -41,6 +41,9 @@ public class SpeedModifierUp extends CommandBase {
   // Returns true when the command should end.
   @Override
   public boolean isFinished() {
+    // this needs to be true, unlike the other commands, because we issue this command multiple
+    // times when changing the virtual gearbox - this forces the scheduler to restart and rerun
+    // the command.
     return true;
   }
 }

@@ -36,9 +36,6 @@ public class Robot extends TimedRobot {
   public static WinchTrain winchTrain = new WinchTrain();
 
   public static RobotContainer m_RC;
-  //Encoder enc;
-  //private static final double cpr = 5; //if am-3314a
-  //private static final double whd = 6; // for 6 inch wheel
 
   /**
    * This function is run when the robot is first started up and should be used for any
@@ -66,9 +63,6 @@ public class Robot extends TimedRobot {
     // and running subsystem periodic() methods.  This must be called from the robot's periodic
     // block in order for anything in the Command-based framework to work.
     CommandScheduler.getInstance().run();
-
-    //double dist = enc.getDistance();
-    //SmartDashboard.putNumber("Encoder", dist);
   }
 
   /**

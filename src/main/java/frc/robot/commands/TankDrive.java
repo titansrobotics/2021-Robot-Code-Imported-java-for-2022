@@ -31,12 +31,16 @@ public class TankDrive extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    // var multiplier = 0.5;
+    // Although it is possible to factor the flight stick into the tank drive speed,
+    // note that these inputs are currently being used for the arm superstructure. Make 
+    // sure that's not a conflict first if you want to use it.
     // double flightStickY = Robot.m_RC.GetShotgunRawAxis(Constants.FLIGHT_STICKY);
     
     double leftStickY = Robot.m_RC.GetDriverRawAxis(Constants.LEFT_STICKY);
     double rightStickY = Robot.m_RC.GetDriverRawAxis(Constants.RIGHT_STICKY);
-
+    
+    // note that tankSpeed is determined by the LT and RT trigger buttons through the
+    // SpeedModifier commands, in increments of .2 from 0.2 to 1 
     Robot.driveTrain.setLeftMotor(frc.robot.Constants.tankSpeed*leftStickY);
     Robot.driveTrain.setRightMotor(frc.robot.Constants.tankSpeed*rightStickY);
   }
