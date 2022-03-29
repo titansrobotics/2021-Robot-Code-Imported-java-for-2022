@@ -19,26 +19,28 @@ public class SpeedModifierUp extends CommandBase {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-    if (frc.robot.Constants.tankSpeed <= 0.8) {
+    
+  }
+
+  // Called every time the scheduler runs while the command is scheduled.
+  @Override
+  public void execute() {
+    if (frc.robot.Constants.tankSpeed < 0.9) {
       frc.robot.Constants.tankSpeed += 0.2; 
     } else {
       //lol don't do anything, you're maxed out
     }
   }
 
-  // Called every time the scheduler runs while the command is scheduled.
-  @Override
-  public void execute() {
-  }
-
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
+    
   }
 
   // Returns true when the command should end.
   @Override
   public boolean isFinished() {
-    return false;
+    return true;
   }
 }
