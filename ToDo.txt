@@ -1,0 +1,15 @@
+--- Still needs work: ---
+fix slight drift - MORE TESTING NEEDED
+
+get arm motors working - Partially built out
+ - Base Angle Motor
+ - Winch
+
+
+
+--- Completely Done: ---
+work on autonomous so it goes forward then backwards - COMPLETED
+change speeds with trigger - COMPLETED
+    - OLD TEMPORARY FIX still available; thrust adjuster on flight stick can adjust speed if we add that variable into the
+	speed calculation. Not currently implemented in favor of trigger electronic gearbox.
+Added a bunch of notes

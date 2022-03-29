@@ -34,6 +34,13 @@ public class Drivetrain extends SubsystemBase {
   public Drivetrain() {
     enc = new Encoder(0,1);
     enc.setDistancePerPulse(Math.PI*whd/cpr); //distance per pulse is pi* (wheel diameter / counts per revolution)
+
+    // note from andy: I'm like 99% sure there's some bad math here becuz there should be 20 counts per revolution off
+    // of the encoder according to documentation but it moves about how far we want it to so I'm leaving it alone.
+    // Someone else's problem for another day. LOL. 
+
+    // oh also we have two encoders but we're only using one as of rn, just a heads up. second one might be useful for better 
+    // autonomous in the future or smthn
   }
 
   @Override
