@@ -5,6 +5,10 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
+
+//This is what runs in Autonomous. It moves forward ten feet. If you hadn't picked up on that already
+//you should not be working on this code
+
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;

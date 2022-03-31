@@ -37,6 +37,11 @@ public class BallTrain extends SubsystemBase {
     //motorLeft.setSafetyEnabled(true);
   }
 
+
+  //soooo we probably should have this function available but I couldn't ever figure out how to get
+  //spark max's brake stuff workin. CTRE ones were built by Justin in the Drivetrain.java for example, but 
+  //couldn't figure out the new API very well, lol
+  
   // public void setBrakeMode() {
   //   armMotor.IdleMode(kBrake);
   // }

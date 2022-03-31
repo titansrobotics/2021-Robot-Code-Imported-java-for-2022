@@ -16,7 +16,7 @@ import frc.robot.commands.ArmDrive;
 
 public class ArmTrain extends SubsystemBase {
 
-  private CANSparkMax armMotor = new CANSparkMax(Constants.ARM_ANGLE_MOTOR_ID, MotorType.kBrushless);
+  private CANSparkMax armMotor = new CANSparkMax(Constants.ARM_ANGLE_MOTOR_ID, MotorType.kBrushless); //note that you have to tell Spark Max what kind of motor we're using - it can drive many more types of motors than the other motor controllers
   /**
    * Creates a new Drivetrain.
    * 

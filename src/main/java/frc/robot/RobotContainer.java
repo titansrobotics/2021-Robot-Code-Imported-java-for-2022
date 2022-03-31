@@ -59,10 +59,17 @@ public class RobotContainer {
   public RobotContainer() {
     // Configure the button bindings
     configureButtonBindings();
+
+    //alternate between normal and autonomous code. Not sure why this is present, but 
+    //I never felt the need to remove it sooooo
     LBButton.whenPressed(new Move10ft());
     RBButton.whenPressed(new TankDrive());
+
+    //virtual gearbox!!!
     LTButton.whenPressed(new SpeedModifierDown());
     RTButton.whenPressed(new SpeedModifierUp());
+
+    //Only let the ball motor move when the trigger is pressed
     Trigger.whenPressed(new ActivateBallDrive());
     Trigger.whenReleased(new DeactivateBallDrive());
 
@@ -88,7 +95,7 @@ public class RobotContainer {
    * @return the command to run in autonomous
    */
   public Command getAutonomousCommand() {
-    // An ExampleCommand will run in autonomous
+    // The command that will run in autonomous
     return(new Move10ft()); 
   }
 }

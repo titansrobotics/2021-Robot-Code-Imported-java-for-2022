@@ -31,6 +31,8 @@ public class BallDrive extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
+    //the motor only moves if the trigger is held down, I've commented everywhere that deals with this with a little catchphrase...
+    //VIRTUAL GEARBOXXXXXXXXXXX
     double flightTwist = Robot.m_RC.GetShotgunRawAxis(Constants.FLIGHT_TWIST);
       if (frc.robot.Constants.triggerStatus == true) {
         Robot.ballTrain.setBallMotor(flightTwist);

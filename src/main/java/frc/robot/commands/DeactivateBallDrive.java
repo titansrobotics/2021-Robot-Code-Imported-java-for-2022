@@ -5,6 +5,8 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
+//just makes frc.robot.Constants.triggerStatus = false;
+
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
