@@ -15,6 +15,8 @@ import frc.robot.subsystems.Drivetrain;
 //import frc.robot.subsystems.LiftTrain;
 import frc.robot.subsystems.ArmTrain;
 import frc.robot.subsystems.WinchTrain;
+import frc.robot.subsystems.BallTrain;
+
 
 //import edu.wpi.first.wpilibj.Encoder;
 //import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -34,6 +36,8 @@ public class Robot extends TimedRobot {
   public static Drivetrain driveTrain = new Drivetrain();
   public static ArmTrain armTrain = new ArmTrain();
   public static WinchTrain winchTrain = new WinchTrain();
+  public static BallTrain ballTrain = new BallTrain();
+
 
   public static RobotContainer m_RC;
 

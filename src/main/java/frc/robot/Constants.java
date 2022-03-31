@@ -32,15 +32,16 @@ public final class Constants {
 	public static final int LEFT_STICKY = 1;
 	public static final int RIGHT_STICKY = 3;
 	public static final int FLIGHT_STICKY = 1;
+	public static final int FLIGHT_TWIST = 2;
 	public static final int FLIGHT_THRUST = 3;
-	public static final int BUTTON_A = 2;
-	public static final int BUTTON_X = 1;
-	public static final int BUTTON_B = 3;
-	public static final int BUTTON_Y = 4;
 	public static final int BUTTON_LB = 5;
 	public static final int BUTTON_RB = 6;
 	public static final int BUTTON_LT = 7;
 	public static final int BUTTON_RT = 8;
+	public static final int TRIGGER = 1;
+
+	// Is trigger pressed? Updated by ActivateBallDrive.java
+	public static boolean triggerStatus = false;
 
 	// I'm not sure this one is used tbh. Dunno what it was meant for.
 	public static final double Timeout = 4.25;
@@ -48,8 +49,10 @@ public final class Constants {
 	// arm motor assignments. Use software like REV Spark Max Client or Phoenix Tuner to assign/ 
 	// discover the motors' CAN assignments. Also remember that there may be PWM controlled motors,
 	// their number is based on what port they're plugged into on the RoboRIO. These two are CAN.
-	public static final int ARM_ANGLE_MOTOR_ID = 4;
-	public static final int WINCH_MOTOR_ID = 7;	
+	public static final int ARM_ANGLE_MOTOR_ID = 5;
+	public static final int WINCH_MOTOR_ID = 4;	
+	public static final int BALL_MOTOR_ID = 6;	
+
 
 	//Note that this is not 'final' because we change it; this is the virtual gearbox multiplier.
 	public static double tankSpeed = 0.6; 

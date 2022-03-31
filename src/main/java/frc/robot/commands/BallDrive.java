@@ -12,15 +12,15 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.Constants;
 import frc.robot.Robot;
 
-public class WinchDrive extends CommandBase {
+public class BallDrive extends CommandBase {
   /**
    * Creates a new TankDrive.
    * 
    * Asher was here
    * 
    */
-  public WinchDrive() {
-    addRequirements(Robot.winchTrain);
+  public BallDrive() {
+    addRequirements(Robot.ballTrain);
   }
 
   // Called when the command is initially scheduled.
@@ -31,23 +31,19 @@ public class WinchDrive extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    double flightThrust = Robot.m_RC.GetShotgunRawAxis(Constants.FLIGHT_THRUST);
-    if(flightThrust > 0.9 || flightThrust < -0.9) {
-
-
-//LOOK HERE ASHER
-     //multiplier for speed of winch 
-      Robot.winchTrain.setWinchMotor(0.6*flightThrust);
-    } else {
-      Robot.winchTrain.setWinchMotor(0);
-    }
-    
+    double flightTwist = Robot.m_RC.GetShotgunRawAxis(Constants.FLIGHT_TWIST);
+      if (frc.robot.Constants.triggerStatus = true) {
+        Robot.ballTrain.setBallMotor(flightTwist);
+      } else {
+        Robot.ballTrain.setBallMotor(0);
+      }
   }
+
 
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-    Robot.winchTrain.setWinchMotor(0);
+    Robot.ballTrain.setBallMotor(0);
   }
 
   // Returns true when the command should end.

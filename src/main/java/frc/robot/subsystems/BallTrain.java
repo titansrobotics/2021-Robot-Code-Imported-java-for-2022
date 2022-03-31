@@ -12,28 +12,28 @@ import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
-import frc.robot.commands.ArmDrive;
+import frc.robot.commands.BallDrive;
 
-public class ArmTrain extends SubsystemBase {
+public class BallTrain extends SubsystemBase {
 
-  private CANSparkMax armMotor = new CANSparkMax(Constants.ARM_ANGLE_MOTOR_ID, MotorType.kBrushless);
+  private CANSparkMax ballMotor = new CANSparkMax(Constants.BALL_MOTOR_ID, MotorType.kBrushless);
   /**
    * Creates a new Drivetrain.
    * 
    * Asher was here
    * 
    */
-  public ArmTrain() {
+  public BallTrain() {
   }
 
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
-    setDefaultCommand(new ArmDrive());
+    setDefaultCommand(new BallDrive());
   }
 
-  public void setArmAngleMotor(double speed){
-    armMotor.set(-speed);
+  public void setBallMotor(double speed){
+    ballMotor.set(-speed);
     //motorLeft.setSafetyEnabled(true);
   }
 

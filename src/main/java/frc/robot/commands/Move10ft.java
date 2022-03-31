@@ -44,16 +44,25 @@ public class Move10ft extends CommandBase {
     } 
     else if (phase == 1){
         phase = 2;
-    }
-    if(Drivetrain.driveDistance()>0 && phase == 2){
-        Robot.driveTrain.setLeftMotor(0.3);
-        Robot.driveTrain.setRightMotor(0.3);
-        Drivetrain.driveDistance();
-      }
-      else if (phase == 2){
+        
+        //comment out following two to enable back
+        //and forth functionality, see below
         Robot.driveTrain.setLeftMotor(0);
-        Robot.driveTrain.setRightMotor(0);     
+        Robot.driveTrain.setRightMotor(0);  
     }
+    
+// if you for some reason want it to go back after going forward,
+//uncomment the following
+
+    // if(Drivetrain.driveDistance()>0 && phase == 2){
+    //     Robot.driveTrain.setLeftMotor(0.3);
+    //     Robot.driveTrain.setRightMotor(0.3);
+    //     Drivetrain.driveDistance();
+    //   }
+    //   else if (phase == 2){
+    //     Robot.driveTrain.setLeftMotor(0);
+    //     Robot.driveTrain.setRightMotor(0);     
+    // }
   }
 
   // Called once the command ends or is interrupted.

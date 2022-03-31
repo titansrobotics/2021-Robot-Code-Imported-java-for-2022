@@ -38,16 +38,11 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private Joystick driverController = new Joystick(Constants.DRIVER_CONTROLLER);
   private Joystick shotgunController = new Joystick(Constants.SHOTGUN_CONTROLLER);
-  Button AButton = new JoystickButton(driverController, Constants.BUTTON_A);
-  Button XButton = new JoystickButton(driverController, Constants.BUTTON_X);
-  Button BButton = new JoystickButton(driverController, Constants.BUTTON_B);
-  Button BButton1 = new JoystickButton(shotgunController, Constants.BUTTON_B);
-  Button YButton1 = new JoystickButton(shotgunController, Constants.BUTTON_Y);
-  Button YButton = new JoystickButton(driverController, Constants.BUTTON_Y);
   Button LBButton = new JoystickButton(driverController, Constants.BUTTON_LB);
   Button RBButton = new JoystickButton(driverController, Constants.BUTTON_RB);
   Button LTButton = new JoystickButton(driverController, Constants.BUTTON_LT);
   Button RTButton = new JoystickButton(driverController, Constants.BUTTON_RT);
+  Button Trigger = new JoystickButton(shotgunController, Constants.TRIGGER);
 
   public double GetDriverRawAxis(int axis) {
     return driverController.getRawAxis(axis);
