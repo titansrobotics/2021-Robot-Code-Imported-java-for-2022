@@ -14,7 +14,8 @@ import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.Button;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
-
+import frc.robot.commands.ActivateBallDrive;
+import frc.robot.commands.DeactivateBallDrive;
 //Commands imports
 import frc.robot.commands.Move10ft;
 import frc.robot.commands.TankDrive;
@@ -62,6 +63,8 @@ public class RobotContainer {
     RBButton.whenPressed(new TankDrive());
     LTButton.whenPressed(new SpeedModifierDown());
     RTButton.whenPressed(new SpeedModifierUp());
+    Trigger.whenPressed(new ActivateBallDrive());
+    Trigger.whenReleased(new DeactivateBallDrive());
 
     //Forces the cameras to start. Dunno if we actually need this but I'm adding it
     // just to make sure we get both camera streams up and running.

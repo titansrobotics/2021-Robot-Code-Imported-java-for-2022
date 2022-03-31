@@ -9,7 +9,7 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
-public class ActivateBallDrive extends CommandBase {
+public class DeactivateBallDrive extends CommandBase {
   /**
    * Creates a new TankDrive.
    * 
@@ -19,14 +19,14 @@ public class ActivateBallDrive extends CommandBase {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-    frc.robot.Constants.triggerStatus = true;
+    frc.robot.Constants.triggerStatus = false;
 
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    frc.robot.Constants.triggerStatus = true;
+    frc.robot.Constants.triggerStatus = false;
 
   }
 

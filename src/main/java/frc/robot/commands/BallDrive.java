@@ -32,7 +32,7 @@ public class BallDrive extends CommandBase {
   @Override
   public void execute() {
     double flightTwist = Robot.m_RC.GetShotgunRawAxis(Constants.FLIGHT_TWIST);
-      if (frc.robot.Constants.triggerStatus = true) {
+      if (frc.robot.Constants.triggerStatus == true) {
         Robot.ballTrain.setBallMotor(flightTwist);
       } else {
         Robot.ballTrain.setBallMotor(0);
