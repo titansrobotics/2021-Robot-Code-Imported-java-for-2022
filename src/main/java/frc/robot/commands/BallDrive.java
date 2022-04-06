@@ -8,8 +8,9 @@
 package frc.robot.commands;
 
 
+import static frc.robot.Constants.FLIGHT_TWIST;
+
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import frc.robot.Constants;
 import frc.robot.Robot;
 
 public class BallDrive extends CommandBase {
@@ -32,13 +33,14 @@ public class BallDrive extends CommandBase {
   @Override
   public void execute() {
     //the motor only moves if the trigger is held down, I've commented everywhere that deals with this with a little catchphrase...
-    //VIRTUAL GEARBOXXXXXXXXXXX
-    double flightTwist = Robot.m_RC.GetShotgunRawAxis(Constants.FLIGHT_TWIST);
-      if (frc.robot.Constants.triggerStatus == true) {
+     double flightTwist = Robot.m_RC.GetShotgunRawAxis(FLIGHT_TWIST);
+      if (frc.robot.Constants.triggerTwoStatus == true) {
         Robot.ballTrain.setBallMotor(flightTwist);
       } else {
         Robot.ballTrain.setBallMotor(0);
       }
+      // Robot.ballTrain.setBallMotor(flightTwist);
+
   }
 
 

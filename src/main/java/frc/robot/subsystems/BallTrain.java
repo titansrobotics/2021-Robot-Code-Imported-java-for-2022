@@ -16,10 +16,10 @@ import frc.robot.commands.BallDrive;
 
 public class BallTrain extends SubsystemBase {
 
-  private CANSparkMax ballMotor = new CANSparkMax(Constants.BALL_MOTOR_ID, MotorType.kBrushless);
+  private CANSparkMax ballMotor = new CANSparkMax(Constants.BALL_MOTOR_ID, MotorType.kBrushed);
   /**
    * Creates a new Drivetrain.
-   * 
+   * Among US - Isaac
    * Asher was here
    * 
    */
