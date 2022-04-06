@@ -39,9 +39,14 @@ public final class Constants {
 	public static final int BUTTON_LT = 7;
 	public static final int BUTTON_RT = 8;
 	public static final int TRIGGER = 1;
+	public static final int TRIGGER_TWO = 2;
+
 
 	// Is trigger pressed? Updated by ActivateBallDrive.java & DeactivateBallDrive.java, determines whether BallDrive/BallTrain functions
 	public static boolean triggerStatus = false;
+
+	public static boolean triggerTwoStatus = false;
+
 
 	// I'm not sure this one is used tbh. Dunno what it was meant for. Leaving it for kicks and giggles
 	public static final double Timeout = 4.25;

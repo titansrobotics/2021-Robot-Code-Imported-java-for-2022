@@ -5,46 +5,42 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
+//just makes frc.robot.Constants.triggerStatus = true;
+
 package frc.robot.commands;
 
-
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import frc.robot.Constants;
-import frc.robot.Robot;
 
-public class ArmDrive extends CommandBase {
+public class ActivateWinchDrive extends CommandBase {
   /**
    * Creates a new TankDrive.
    * 
    * Asher was here
    * 
    */
-  public ArmDrive() {
-    addRequirements(Robot.armTrain);
-  }
-
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
+    frc.robot.Constants.triggerTwoStatus = true;
+
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    double flightStickY = Robot.m_RC.GetShotgunRawAxis(Constants.FLIGHT_STICKY);
+    frc.robot.Constants.triggerTwoStatus = true;
 
-    Robot.armTrain.setArmAngleMotor(0.4*flightStickY);
   }
 
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-    Robot.armTrain.setArmAngleMotor(0);
+    // frc.robot.Constants.triggerStatus = false;
   }
 
   // Returns true when the command should end.
   @Override
   public boolean isFinished() {
-    return false;
+    return true;
   }
 }

@@ -17,7 +17,8 @@ public class WinchDrive extends CommandBase {
    * Creates a new TankDrive.
    * 
    * Asher was here
-   * 
+   *
+   * Izzy was here :))
    */
   public WinchDrive() {
     addRequirements(Robot.winchTrain);
@@ -33,12 +34,17 @@ public class WinchDrive extends CommandBase {
   public void execute() {
     double flightThrust = Robot.m_RC.GetShotgunRawAxis(Constants.FLIGHT_THRUST);
     //below line adds a dead zone, only the extremes of the thrust input make the motor move
-    if(flightThrust > 0.9 || flightThrust < -0.9) {
+    // if(flightThrust > 0.9 || flightThrust < -0.9) {
 
 
-//LOOK HERE ASHER
      //multiplier for speed of winch 
-      Robot.winchTrain.setWinchMotor(0.6*flightThrust);
+      // Robot.winchTrain.setWinchMotor(0.75*flightThrust);
+    // } else {
+      // Robot.winchTrain.setWinchMotor(0);
+    // }
+
+    if (frc.robot.Constants.triggerStatus == true) {
+      Robot.winchTrain.setWinchMotor(0.75*flightThrust);
     } else {
       Robot.winchTrain.setWinchMotor(0);
     }

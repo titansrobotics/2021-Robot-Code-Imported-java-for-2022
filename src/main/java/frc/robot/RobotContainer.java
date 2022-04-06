@@ -16,6 +16,8 @@ import edu.wpi.first.wpilibj2.command.button.Button;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import frc.robot.commands.ActivateBallDrive;
 import frc.robot.commands.DeactivateBallDrive;
+import frc.robot.commands.ActivateWinchDrive;
+import frc.robot.commands.DeactivateWinchDrive;
 //Commands imports
 import frc.robot.commands.Move10ft;
 import frc.robot.commands.TankDrive;
@@ -44,6 +46,7 @@ public class RobotContainer {
   Button LTButton = new JoystickButton(driverController, Constants.BUTTON_LT);
   Button RTButton = new JoystickButton(driverController, Constants.BUTTON_RT);
   Button Trigger = new JoystickButton(shotgunController, Constants.TRIGGER);
+  Button TriggerTwo = new JoystickButton(shotgunController, Constants.TRIGGER_TWO);
 
   public double GetDriverRawAxis(int axis) {
     return driverController.getRawAxis(axis);
@@ -72,6 +75,11 @@ public class RobotContainer {
     //Only let the ball motor move when the trigger is pressed
     Trigger.whenPressed(new ActivateBallDrive());
     Trigger.whenReleased(new DeactivateBallDrive());
+
+    
+    //Only let the ball motor move when the trigger is pressed
+    TriggerTwo.whenPressed(new ActivateWinchDrive());
+    TriggerTwo.whenReleased(new DeactivateWinchDrive());
 
     //Forces the cameras to start. Dunno if we actually need this but I'm adding it
     // just to make sure we get both camera streams up and running.
